@@ -81,5 +81,13 @@
   recipeModal.addEventListener('click', (event) => {
     if (event.target === recipeModal) recipeModal.classList.remove('open');
   });
+
+  function removeHostingBadge() {
+    document.querySelectorAll('#nl-badge-frame, iframe[title="Powered by Netlify"]').forEach((badge) => badge.remove());
+  }
+
+  removeHostingBadge();
+  const hostingBadgeObserver = new MutationObserver(removeHostingBadge);
+  hostingBadgeObserver.observe(document.documentElement, { childList: true, subtree: true });
 })();
 
