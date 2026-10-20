@@ -4,3 +4,6 @@
 @media(max-width:420px){.site{box-shadow:none}.wrap{padding-left:18px;padding-right:18px}.hero{padding-left:18px;padding-right:18px}.hero h1{font-size:27px}.hero h2{font-size:20px}.section-title{font-size:24px}.bonus-card{grid-template-columns:102px 1fr}.bonus-card img{width:96px}.review p{font-size:10px}.upgrade-card{padding:30px 18px 20px}.upgrade-card h2{font-size:22px}.upgrade-card h2 strong{font-size:31px}.upgrade-saving{flex-direction:column;gap:2px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
+/* Oculta o selo flutuante da hospedagem sem alterar o conteúdo da página. */
+#nl-badge-frame{display:none!important;visibility:hidden!important}
+
