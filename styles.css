@@ -7,3 +7,20 @@
 /* Oculta o selo flutuante da hospedagem sem alterar o conteúdo da página. */
 #nl-badge-frame{display:none!important;visibility:hidden!important}
 
+
+/* Ajustes visuais da oferta 250 Almoços */
+.promo{background:#d71920;color:#fff}
+.benefit{background:#fff0e2;color:#171717;box-shadow:none}
+.benefit p{color:#171717}
+.hero-product{display:block;width:100%;height:auto;margin:8px auto 12px;border:0;border-radius:0;outline:0;background:transparent;box-shadow:none;object-fit:contain}
+.whatsapp-examples{padding:58px 20px;background:#fff}
+.whatsapp-examples .section-title{margin-bottom:14px}
+.illustrative-note{max-width:410px;margin:0 auto 24px;color:#765b15;font-size:12px;line-height:1.45;text-align:center}
+.whatsapp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.whatsapp-grid img{display:block;width:100%;height:auto;border:0;border-radius:12px;box-shadow:none}
+@media(max-width:420px){.whatsapp-examples{padding:48px 16px}.whatsapp-grid{grid-template-columns:1fr;gap:16px}}
+/* Garantia mais compacta e destacada */
+.guarantee{padding:52px 28px;background:#1d1d1d}
+.guarantee .seal{margin-bottom:10px;border-color:#00c853;color:#00c853}
+.guarantee h3{margin:0 0 4px;color:#00c853}
+.guarantee h4{margin:0 0 16px;color:#00c853;line-height:1.08}
