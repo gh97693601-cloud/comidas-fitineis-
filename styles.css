@@ -6,6 +6,7 @@
 
 /* Oculta o selo flutuante da hospedagem sem alterar o conteúdo da página. */
 #nl-badge-frame{display:none!important;visibility:hidden!important}
+#lovable-badge { display: none !important; }
 
 
 /* Ajustes visuais da oferta 250 Almoços */
