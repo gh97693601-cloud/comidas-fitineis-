@@ -1,0 +1,25 @@
+name: ChatLove Preview
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+concurrency:
+  group: chatlove-preview
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run build
+      - run: cd .output && zip -r ../chatlove-output.zip . && cd ..
+      - name: Deploy preview to ChatLove
+        run: >
+          curl -fsS --retry 5 --retry-delay 10 --retry-all-errors --max-time 240 -X POST "https://scalehub.academy/api/deploy"
+          -H "Authorization: Bearer ${{ secrets.CHATLOVE_DEPLOY_TOKEN }}"
+          -H "Content-Type: application/zip"
+          -H "X-Commit-Sha: ${{ github.sha }}"
+          --data-binary "@chatlove-output.zip"
